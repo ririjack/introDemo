@@ -28,7 +28,7 @@ public class JedisAdapter implements InitializingBean {
     }
 
     public static void mainx(String[] argv) {
-        Jedis jedis = new Jedis("redis://localhost:6379/9");
+        Jedis jedis = new Jedis("redis://172.19.245.94:6379/9");
         jedis.flushDB();
 
         // get set
@@ -180,7 +180,7 @@ public class JedisAdapter implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        pool = new JedisPool("redis://localhost:6379/10");
+        pool = new JedisPool("redis://172.19.245.94:6379/10");
     }
 
     public long sadd(String key, String value) {
